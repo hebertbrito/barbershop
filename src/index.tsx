@@ -1,12 +1,19 @@
 import React from "react";
-import {SafeAreaView, View, Text} from "react-native";
+import {NavigationContainer} from "@react-navigation/native";
+import {createStackNavigator} from "@react-navigation/stack";
+
+import {
+SingUp
+} from './pages'
+
+const Stack = createStackNavigator();
 
 export const App = React.memo(() => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text style={{fontFamily: "RougeScript-Regular"}}>Ola mundo</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={SingUp} options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 });
