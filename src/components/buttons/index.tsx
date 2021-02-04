@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   SafeAreaView,
@@ -11,8 +12,11 @@ import {
 import {styles} from "./styles";
 
 export const ButtonPrimary = React.memo(() => {
+
+  const { navigate } = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.buttonformat}>
+    <TouchableOpacity style={styles.buttonformat} onPress={()=>navigate("BottomNavigation")}>
       <Image
         source={require("../../assets/images/wood.jpg")}
         style={styles.backbutton}
