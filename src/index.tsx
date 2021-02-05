@@ -17,6 +17,11 @@ export const App = React.memo(() => {
           component={SingUp}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="BottomNavigation"
+          component={BottomNavigation}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

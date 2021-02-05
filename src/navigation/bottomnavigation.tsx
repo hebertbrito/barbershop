@@ -24,7 +24,6 @@ function BottomNavigator({ ...props }) {
             activeColor="#ef6c00"
             inactiveColor="#424242"
             labeled={true}
-            shifting={true}
             backBehavior="history"
             keyboardHidesNavigationBar={true}
             sceneAnimationEnabled={true}
